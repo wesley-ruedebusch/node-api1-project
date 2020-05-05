@@ -34,3 +34,8 @@ server.use(express.json())
           .status(404)
           .json({ errormessage: "The user with the specified ID does not exist." });
   });
+
+  const port = 5000;
+  server.listen(port, () =>
+    console.log(`api running on port ${port}`)
+  ); // port crashed. Had to delete and restart and rewrite
